@@ -31,12 +31,12 @@ class Movie {
 
     public function setGenere(){
       $numeroGenere =  rand(0, 4);
-      return  $this-> genere = $generi[$numeroGenere];
+      return  $this->genere = $generi[$numeroGenere];
     }
 
     public function setRating(){
       $numeroRating =  rand(0, 3);
-     return   $this-> rating = $eta[$numeroRating];
+     return   $this->rating = $eta[$numeroRating];
     }
 
     function __construct($_nome){
