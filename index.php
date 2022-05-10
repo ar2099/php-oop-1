@@ -45,7 +45,9 @@ class Movie {
 }
 
 $tarzan = new Movie("tarzan");
+$bilbo = new Movie("bilbo");
 var_dump($tarzan);
+var_dump($bilbo);
 ?>
 
 
