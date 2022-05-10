@@ -19,8 +19,6 @@ metodi d'istanza che abbiamo visto stamattina e create un file index.php in cui:
   
 
 <?php
-$generi = ["fantascienza", "azione", "drammatico", "comico", "horror"];
-$eta = ["+18", "+3", "+8", "+13"]
 ?>
 
 <?php
@@ -29,23 +27,23 @@ class Movie {
     public $genere;
     public $rating;
 
-    public function setGenere(){
-      $numeroGenere =  rand(0, 4);
-      return  $this->genere = $generi[$numeroGenere];
+    
+
+    public function setRating($_rating){
+      $this-> rating = $_rating;
     }
 
-    public function setRating(){
-      $numeroRating =  rand(0, 3);
-     return   $this->rating = $eta[$numeroRating];
-    }
-
-    function __construct($_nome){
+    function __construct($_nome, $_genere){
         $this-> nome = $_nome;
+        $this-> genere = $_genere;
     }
+    
 }
 
-$tarzan = new Movie("tarzan");
-$bilbo = new Movie("bilbo");
+$tarzan = new Movie("tarzan", "avventura");
+$bilbo = new Movie("bilbo", "fantasy");
+$bilbo->setRating("+18");
+$tarzan->setRating("+6");
 var_dump($tarzan);
 var_dump($bilbo);
 ?>
