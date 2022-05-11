@@ -19,6 +19,7 @@ metodi d'istanza che abbiamo visto stamattina e create un file index.php in cui:
   
 
 <?php
+$botteghini = ["scarso", "medio", "successo", "blockbuster"]
 ?>
 
 <?php
@@ -26,7 +27,6 @@ class Movie {
     public $nome;
     public $genere;
     public $rating;
-
     
 
     public function setRating($_rating){
@@ -44,8 +44,16 @@ $tarzan = new Movie("tarzan", "avventura");
 $bilbo = new Movie("bilbo", "fantasy");
 $bilbo->setRating("+18");
 $tarzan->setRating("+6");
-var_dump($tarzan);
-var_dump($bilbo);
+//  var_dump($tarzan);
+// var_dump($bilbo);
+
+echo "<p>" . $tarzan -> nome . "</p>";
+echo "<p>" . $tarzan -> genere . "</p>";
+echo "<p>" . $tarzan -> rating . "</p>";
+
+echo "<p>" . $bilbo -> nome . "</p>";
+echo "<p>" . $bilbo -> genere . "</p>";
+echo "<p>" . $bilbo -> rating . "</p>";
 ?>
 
 
